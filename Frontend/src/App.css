@@ -1,7 +1,6 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 
@@ -39,4 +38,77 @@
 
 .read-the-docs {
   color: #888;
+}
+
+/* General Layout */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+/* Map Container - Fixed Position */
+.map-container {
+  width: 100%;
+  max-width: 900px;
+  height: 450px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 2px solid #ddd;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Container - Takes 80% of the screen width */
+.table-container {
+  width: 80vw;  /* 80% of viewport width */
+  margin: 20px auto;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  background: #fff;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+th, td {
+  padding: 16px; /* Increased padding for better spacing */
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+th {
+  background: #000000;
+  color: white;
+  font-weight: bold;
+}
+
+/* Row Hover Effect */
+tr:hover {
+  background: #f2f2f2;
+}
+
+/* Show Location Button - Black Color */
+.location-btn {
+  background: black;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.location-btn:hover {
+  background: #333;
 }

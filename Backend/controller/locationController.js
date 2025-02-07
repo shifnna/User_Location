@@ -1,6 +1,6 @@
+const Location = require("../model/locationSchema.js");
 
-const Location = require("../model/locationSchema.js")
-
+// Save user location
 const createLocation = async (req, res) => {
     try {
         const { username, latitude, longitude } = req.body;
@@ -14,19 +14,20 @@ const createLocation = async (req, res) => {
     } catch (error) {
         res.status(500).json({ message: "Server error", error: error.message });
     }
-}
+};
 
-
-const getLocations =  async (req, res) => {
+// Get all saved user locations
+const getLocations = async (req, res) => {
     try {
-        const locations = await Location.find();
+        const locations = await Location.find(); // Fetch all locations
         res.status(200).json(locations);
     } catch (error) {
         res.status(500).json({ message: "Server error", error: error.message });
     }
-}
+};
 
-module.exports={
+
+module.exports = {
     createLocation,
     getLocations
-}
+};
